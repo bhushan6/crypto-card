@@ -1,5 +1,6 @@
 import React from "react";
 import { toCSSUnit } from "../util";
+import { ValueDisplay } from "./ValueDisplay";
 
 export const Card = ({
   title = "Bitcoin (BTC)",
@@ -62,19 +63,10 @@ export const Card = ({
     <div class="card-wrapper">
       <div class="card-container" style={cardContainer}>
         <h1 className="title">{title}</h1>
-        <div>
-          <p className="value-display">
-            {price}{" "}
-            <span className={`percent ${percent > 0 ? "up" : "down"}`}>
-              {percent}%
-            </span>
-          </p>
-          <p className="label">Price</p>
-        </div>
-        <div>
-          <p className="value-display">{TVL}</p>
-          <p className="label">TVL</p>
-        </div>
+
+        <ValueDisplay value={price} percent={percent} label={"Price"} />
+        <ValueDisplay value={TVL} label={"TVL"} />
+
         <div>
           <div className="icon-container">
             <div></div>
@@ -84,6 +76,7 @@ export const Card = ({
           <p className="label">Popular pairs</p>
         </div>
       </div>
+
       <div style={{ width: r, height: r }} class="card-icon">
         {icon}
       </div>
