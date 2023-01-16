@@ -16,6 +16,7 @@ body {
   justify-content: flex-start;
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .App {
@@ -28,6 +29,7 @@ body {
 
 .card-wrapper {
   position: relative;
+  margin: 40px 0;
 }
 
 .card-container {
