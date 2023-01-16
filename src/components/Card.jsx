@@ -9,6 +9,7 @@ export const Card = ({
   TVL = "$60,000",
   icon,
   dimension = 190.74,
+  pairs = [],
 }) => {
   const d = toCSSUnit(dimension, "px");
   const p = toCSSUnit(0.2 * dimension, "px");
@@ -69,9 +70,9 @@ export const Card = ({
 
         <div>
           <div className="icon-container">
-            <div></div>
-            <div></div>
-            <div></div>
+            {pairs.map((i) => {
+              return <div>{i}</div>;
+            })}
           </div>
           <p className="label">Popular pairs</p>
         </div>

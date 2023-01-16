@@ -17,6 +17,7 @@ function App() {
               percent={ele.percent}
               TVL={ele.TVL}
               icon={ele.icon}
+              pairs={ele.pairs}
             />
           );
         })}
