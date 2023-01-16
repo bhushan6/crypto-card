@@ -1,38 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;400;700&family=Space+Mono:wght@400;700&family=Tomorrow:wght@600&display=swap");
+* {
+  margin: 0;
+  font-family: "Tomorrow", sans-serif;
+}
+
+body {
+  margin: 0;
+  box-sizing: border-box;
+  background-color: #14172b;
+  height: 100vh;
+}
+
+.cards-container {
+  gap: 10px;
+  justify-content: flex-start;
+  display: flex;
+  align-items: center;
+}
+
 .App {
+  padding: 2em;
+  display: flex;
+  align-items: flex-start;
+  gap: 4em;
+  flex-direction: column;
+}
+
+.card-wrapper {
+  position: relative;
+}
+
+.card-container {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.card-icon {
+  background: linear-gradient(
+    180deg,
+    rgba(98, 106, 136, 0.1) 0%,
+    rgba(234, 179, 0, 0.06) 100%
+  );
+  backdrop-filter: blur(50px);
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%, -50%);
+  z-index: 10000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-icon svg {
+  transform: scale(0.5);
+}
+
+.title {
+  font-size: 12px;
+  color: #737bae;
+  opacity: 0.9;
+  width: 100%;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.value-display {
+  background: #14172b;
+  border-radius: 17px;
   color: white;
+  text-align: center;
+  padding: 8px;
+  font-size: 16px;
 }
 
-.App-link {
-  color: #61dafb;
+.value-display .percent.up {
+  color: #00ffa3;
+  opacity: 0.9;
+  margin-left: 8px;
+  font-size: 12px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.down {
+  color: #ff4d4d;
+  opacity: 0.9;
+  margin-left: 8px;
+  font-size: 12px;
+}
+
+.label {
+  font-size: 12px;
+  color: #737bae;
+  opacity: 0.9;
+  width: 100%;
+  text-align: center;
+}
+
+.icon-container {
+  width: max-content;
+  padding: 8px;
+  display: flex;
+  gap: 2px;
+  text-align: center;
+  margin: 0 auto;
+  background: #14172b;
+  border-radius: 17px;
+}
+
+.icon-container div {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: white;
 }
